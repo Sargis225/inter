@@ -14,6 +14,8 @@ class SignInViewController: UIViewController {
     var viewModel : RegisterViewModel!
     let fontName =  "Montserrat-Regular"
     var user: [User] = []
+    let App = UIApplication.shared.delegate as! AppDelegate
+    
     
     
     @IBOutlet weak var firstNamTF: StandartsTextField! {
@@ -150,11 +152,8 @@ class SignInViewController: UIViewController {
         emailTF.text = ""
         getUsers()
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
-//        for i in user {
-//            print(i.firstName)
-//            print(i.lastName)
-//            print(i.email)
-//        }
+        
+        
     }
     
     
